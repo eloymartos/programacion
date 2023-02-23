@@ -1,0 +1,5 @@
+import mirepo
+
+fun main(){
+
+}
