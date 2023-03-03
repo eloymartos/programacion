@@ -1,6 +1,6 @@
 package myOnlineShop
 
-abstract class Product(regularInitialPrice: Double) {
+abstract class Product(regularInitialPrice: Double):RelationInterface {
 
     var regularPrice: Double
     var IVA = tiposIVA[3]
@@ -19,6 +19,21 @@ abstract class Product(regularInitialPrice: Double) {
     abstract fun computeSpecialCustomerPrice():Double
 
     abstract fun computerSalePrice():Double
+
+    override fun isGreater(a: Any): Boolean {
+        a as Product
+        return if ( a.regularPrice < this.regularPrice) true else false
+    }
+
+    override fun isEqual(a: Any): Boolean {
+        a as Product
+        return if ( a.regularPrice == this.regularPrice) true else false
+    }
+
+    override fun isLess(a: Any): Boolean {
+        a as Product
+        return if ( a.regularPrice > this.regularPrice) true else false
+    }
 
     companion object{
         var contador = 0
