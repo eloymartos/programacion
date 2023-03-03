@@ -1,5 +1,3 @@
-import mirepo
-
 fun main(){
 
 }
