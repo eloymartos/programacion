@@ -22,17 +22,17 @@ abstract class Product(regularInitialPrice: Double):RelationInterface {
 
     override fun isGreater(a: Any): Boolean {
         a as Product
-        return if ( a.regularPrice < this.regularPrice) true else false
+        return a.regularPrice < regularPrice
     }
 
     override fun isEqual(a: Any): Boolean {
         a as Product
-        return if ( a.regularPrice == this.regularPrice) true else false
+        return a.regularPrice == regularPrice
     }
 
     override fun isLess(a: Any): Boolean {
         a as Product
-        return if ( a.regularPrice > this.regularPrice) true else false
+        return a.regularPrice > regularPrice
     }
 
     companion object{
