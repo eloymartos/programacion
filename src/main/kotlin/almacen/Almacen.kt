@@ -1,14 +1,14 @@
+import almacen.BebidaCantidad
+
+class Almacen(almacen_mapa:MutableMap<Int, MutableList<BebidaCantidad>>) {//fin clase
 
 
-class Almacen(almacen_mapa:MutableMap<Int, MutableList<Bebida>>) {//fin clase
+    var estant1: MutableList<BebidaCantidad> = mutableListOf()
+    var estant2: MutableList<BebidaCantidad> = mutableListOf()
+    var estant3: MutableList<BebidaCantidad> = mutableListOf()
+    var estant4: MutableList<BebidaCantidad> = mutableListOf()
 
-
-    var estant1: MutableList<Bebida> = mutableListOf()
-    var estant2: MutableList<Bebida> = mutableListOf()
-    var estant3: MutableList<Bebida> = mutableListOf()
-    var estant4: MutableList<Bebida> = mutableListOf()
-
-    var estanterias = mutableMapOf<Int, MutableList<Bebida>>(1 to estant1, 2 to estant2, 3 to estant3, 4 to estant4)
+    var estanterias = mutableMapOf<Int, MutableList<BebidaCantidad>>(1 to estant1, 2 to estant2, 3 to estant3, 4 to estant4)
         get(){
             return field
         }
@@ -42,7 +42,7 @@ class Almacen(almacen_mapa:MutableMap<Int, MutableList<Bebida>>) {//fin clase
 
     //primeraforma. Agregarla a una estantería que nos digan
 
-    fun agregar1(bebida_nueva: Bebida, num_estanteria: Int) {
+    fun agregar1(bebida_nueva: BebidaCantidad, num_estanteria: Int) {
         //la interrogación es para que solo añada la bebida si la clave existe
         //es como hacer un if y un else de si está si y si no no en una línea
         estanterias[num_estanteria]?.add(bebida_nueva)
@@ -51,7 +51,7 @@ class Almacen(almacen_mapa:MutableMap<Int, MutableList<Bebida>>) {//fin clase
 
     //agregar al estante + vacío
 
-    fun agregar2(bebida_nueva: Bebida){
+    fun agregar2(bebida_nueva: BebidaCantidad){
 
        // var tamanio=99999999999999
         var tamanio=estanterias[estanterias.keys.min()]?.size
@@ -71,7 +71,7 @@ class Almacen(almacen_mapa:MutableMap<Int, MutableList<Bebida>>) {//fin clase
 
     //agregar al estante que tenga + bebidas de la misma marca
 
-    fun agregar3(bebida_nueva: Bebida){
+    fun agregar3(bebida_nueva: BebidaCantidad){
 
         var posicion=0
         //var marca_recibida=bebida_nueva.marca

@@ -1,4 +1,5 @@
 package tienda
 
-class mainTienda {
+fun main(){
+
 }

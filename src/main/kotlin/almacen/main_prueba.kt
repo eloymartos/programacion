@@ -1,4 +1,4 @@
-
+import almacen.BebidaCantidad
 
 fun main(args: Array<String>) {
 
@@ -6,7 +6,7 @@ fun main(args: Array<String>) {
     //vamos a probar los objetos y sus funciones
 
     //completa
-    var agua1=Agua_mineral(2.0,1.0,"bezoya",1,"cazorla")
+    var agua1=BebidaCantidad(Agua_mineral(2.0,1.0,"bezoya",1,"cazorla"),5)
     //sin identificador
     var agua2=Agua_mineral(1.0,1.0,"fontvella","pepe")
     //dando un identificador que ya existe
