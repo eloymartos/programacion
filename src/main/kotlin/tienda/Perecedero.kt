@@ -1,0 +1,4 @@
+package tienda
+
+class Perecedero {
+}
