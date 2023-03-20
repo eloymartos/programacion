@@ -60,7 +60,7 @@ fun main(){
             try {
 
                 nombre = readln()
-
+                salario = 2.2
                 salario = readln().toDoubleOrNull()
                 if (salario == null){
                     salario = 0.0

@@ -1,7 +1,9 @@
 package pruebas
 
-fun main(){
+fun main(args:Array<String>){
 
-    var valor = readln().toInt()
+    for (i in args) println(i)
+    val str1 = String.format("%x",404)
+    println(str1)
 
 }
