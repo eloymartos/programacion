@@ -1,6 +1,6 @@
 package myOnlineShop
 
-class Book(price : Double, publisher:String, year:Int):Product(price) {
+class Book(price: Double, publisher:String, year:Int):Product(price) {
 
     private var publisher = ""
 
