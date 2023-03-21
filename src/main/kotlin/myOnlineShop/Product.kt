@@ -35,6 +35,11 @@ abstract class Product(regularInitialPrice: Double):RelationInterface {
         return a.regularPrice > regularPrice
     }
 
+    open fun mostrar():String{
+        return("objeto ${numeroSerie} = \ntipo = ${javaClass.name}\nregular price = ${regularPrice}\nsale price = ${computerSalePrice()}\nSpecial Customer Price = ${computeSpecialCustomerPrice()}\n------------------")
+
+    }
+
     companion object{
         var contador = 0
         val tiposIVA = arrayOf(0,4,10,21)
