@@ -1,0 +1,25 @@
+2- cd Escritorio
+mkdir ejercicios
+3- cp *.txt ejercicios
+4- sudo dmsg | grep SATA >ejercicios/arranque.txt
+5- mkdir nuevo_ejercicios
+6- cp ejercicios/pedidos.txt nuevo_ejercicios/
+7- mv ejercicios/jugadores.txt nuevo_ejercicios/
+8- rm -r ejercicios/
+9- cd nuevo_ejercicios
+10- pwd
+11- date 
+12- sudo apt install ncal
+13- cal 2025
+14- hostname
+15- 
+16- touch nuevo_ejercicios/muestras.txt
+17- nano nuevo_ejercicios/muestras.txt
+hola mundo
+c^o
+18- history
+19- more nuevo_ejercicios/pedidos.txt
+20- head -35 jugadores.txt
+21- grep -d: -f1-3 jugadores.txt
+22- 
+23- sort -r: -k2 jugadores.txt
