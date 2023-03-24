@@ -5,22 +5,7 @@ fun main(args:Array<String>) {
     val listado = mutableListOf<Product>()
     //TV 1250.0 HiSens 45 TV 1000.0 Samsung 30 Mp3Player 250.0 Apple blue Camera 500.0 Sony Book 15.0 "Korea press" 1986
     for (i in args.indices) {
-        if (args[i] == "Book"){
-            listado.add(Book(args[(i+1)].toDouble(), args[i+2], args[i+3].toInt()))
-            println("libro")
-        }
-        if (args[i] == "TV"){
-            listado.add(TV(args[i+1].toDouble(), args[i+2], args[i+3].toInt()))
-            println("tele")
-        }
-        if (args[i] == "Camera"){
-            listado.add(Camera(args[i+1].toDouble(), args[i+2]))
-            println("camara")
-        }
-        if (args[i] == "Mp3Player"){
-            listado.add(Camera(args[i+1].toDouble(), args[i+2]))
-            println("emepetres")
-        }
+        buscartipo(listado, i, args)
     }
     while (true){
         print("operaciones a ejecutar:\n" +
@@ -113,4 +98,19 @@ fun encontrar(listado: MutableList<Product>, numero:Int): Product {
         comodin.add(i)
     }
     return comodin[0]
+}
+
+fun buscartipo(listado: MutableList<Product>, i:Int, args:Array<String>){
+    if (args[i] == "Book"){
+        listado.add(Book(args[(i+1)].toDouble(), args[i+2], args[i+3].toInt()))
+    }
+    if (args[i] == "TV"){
+        listado.add(TV(args[i+1].toDouble(), args[i+2], args[i+3].toInt()))
+    }
+    if (args[i] == "Camera"){
+        listado.add(Camera(args[i+1].toDouble(), args[i+2]))
+    }
+    if (args[i] == "Mp3Player"){
+        listado.add(Camera(args[i+1].toDouble(), args[i+2]))
+    }
 }
