@@ -4,7 +4,7 @@ class Alquiler(nvehiculos:Int) {
 
     private var listado = mutableListOf<Vehiculo>()
 
-    private var nvehiculos = 0
+    private var nvehiculos :Int
 
     private val nombreEmpresa = "Vehiculos martos"
 
@@ -37,20 +37,21 @@ class Alquiler(nvehiculos:Int) {
         }
     }
 
-    fun importeTotal(){
+    fun importeTotal():String{
         var suma = 0.0
         for (i in listado){
             suma += i.alquiler()
         }
-        println("Total alquiler: $suma €\n-------------\nDETALLE")
+        var cadena = ""
+        cadena +=("Total alquiler: $suma €\n-------------\nDETALLE")
         for (i in listado.indices){
-            println(importe((i)))
+            cadena += (importe((i)))
         }
-
+        return cadena
     }
 
     private fun importe(pos:Int):String{
-        return "-------------\nVEHÍCULO ${pos+1}\n${listado[pos].recibo()}"
+        return "\n-------------\nVEHÍCULO ${pos+1}\n${listado[pos].recibo()}"
     }
 
 }

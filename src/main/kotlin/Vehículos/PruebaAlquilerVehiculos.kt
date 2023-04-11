@@ -1,5 +1,7 @@
 package Vehículos
 
+import java.io.*
+
 fun main(){
     var numero = 0
     do {
@@ -7,6 +9,6 @@ fun main(){
         numero = readln().toInt()
     }while (numero <=0)
     val alquiler = Alquiler(numero)
-
-    alquiler.importeTotal()
+    var archivo = File("data/guardado")
+    archivo.writeText(alquiler.importeTotal())
 }
