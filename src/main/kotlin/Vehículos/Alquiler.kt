@@ -18,19 +18,19 @@ class Alquiler(nvehiculos:Int) {
             }while (tipo !in arrayOf(1,2,3,4))
             when (tipo){
                 1->{
-                    println("primer valor = duracción, segundo matricula, tercero plazas")
+                    println("primer valor = matricula, segundo duracion, tercero plazas")
                     listado.add(Coche(readln(), readln().toInt(), readln().toInt()))
                 }
                 2->{
-                    println("primer valor = duracción, segundo matricula, tercero plazas")
+                    println("primer valor = matricula, segundo duracion, tercero plazas")
                     listado.add(Bus(readln(), readln().toInt(), readln().toInt()))
                 }
                 3->{
-                    println("primer valor = duracción, segundo matricula, tercero tara")
+                    println("primer valor = matricula, segundo duracion, tercero tara")
                     listado.add(Camion(readln(), readln().toInt(), readln().toInt()))
                 }
                 4->{
-                    println("primer valor = duracción, segundo matricula, tercero tara")
+                    println("primer valor = matricula, segundo duracion, tercero tara")
                     listado.add(Furgoneta(readln(), readln().toInt(), readln().toInt()))
                 }
             }

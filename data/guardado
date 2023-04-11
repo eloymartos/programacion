@@ -1,11 +1,19 @@
-Total alquiler: 102.5 €
+Total alquiler: 1251.0 €
 -------------
 DETALLE
 -------------
 VEHÍCULO 1
 ---------
+COCHE
+---------
+dias de alquiler = 12
+nº plazas = 5
+total = 607.5
+-------------
+VEHÍCULO 2
+---------
 BUS
 ---------
-dias de alquiler = 1
-nº plazas = 35
-total = 172.5
+dias de alquiler = 12
+nº plazas = 29
+total = 701.5

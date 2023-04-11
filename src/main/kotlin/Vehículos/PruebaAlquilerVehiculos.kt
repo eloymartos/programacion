@@ -10,5 +10,6 @@ fun main(){
     }while (numero <=0)
     val alquiler = Alquiler(numero)
     var archivo = File("data/guardado")
+    println(alquiler.importeTotal())
     archivo.writeText(alquiler.importeTotal())
 }

@@ -8,7 +8,7 @@ abstract class Vehiculo(nmatricula : String, duracionA:Int) {
     protected var duracion = 0
         get() = field
         set(value) {
-            field = if(duracion<=0) 1 else value
+            field = if(value<=0) 1 else value
         }
 
     init {
