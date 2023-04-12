@@ -9,9 +9,9 @@ fun main(){
 
     var contador = 0
 
-    while (archivo1.size-1 > contador || archivo2.size-1>contador){
-        if (archivo1.size-1>contador) println(archivo1[contador])
-        if (archivo2.size-1>contador) println(archivo2[contador])
+    while (archivo1.size > contador || archivo2.size-1>contador){
+        if (archivo1.size>contador) println(archivo1[contador])
+        if (archivo2.size>contador) println(archivo2[contador])
 
         contador ++
     }
