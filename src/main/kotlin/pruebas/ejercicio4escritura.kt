@@ -13,9 +13,9 @@ fun main(){
     println("introduce la clave")
     val clave = readln().toInt()
     var resultado = ""
-    for (i in File(lectura).bufferedReader().readLines()){
-        for(x in i){
-            resultado += (x.toByte()-clave).toChar().toString()
+    for (linea in File(lectura).bufferedReader().readLines()){
+        for(caracter in linea){
+            resultado += (caracter.toByte()-clave).toChar().toString()
         }
         resultado+= "\n"
     }

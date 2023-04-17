@@ -11,6 +11,10 @@ class Book(price: Double, publisher:String, year:Int):Product(price) {
         this.yearPublished = year
     }
 
+    override fun mostrar(): String {
+        return super.mostrar() + "\npublisher = $publisher\n Year = $yearPublished\n----------------"
+    }
+
     override fun computeSpecialCustomerPrice(): Double {
         return computerSalePrice()-2
     }

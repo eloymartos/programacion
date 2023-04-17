@@ -36,7 +36,7 @@ abstract class Product(regularInitialPrice: Double):RelationInterface {
     }
 
     open fun mostrar():String{
-        return("objeto ${numeroSerie} = \ntipo = ${javaClass.name}\nregular price = ${regularPrice}\nsale price = ${computerSalePrice()}\nSpecial Customer Price = ${computeSpecialCustomerPrice()}\n------------------")
+        return("objeto ${numeroSerie} = \ntipo = ${javaClass.name}\nregular price = ${regularPrice}\nsale price = ${computerSalePrice()}\nSpecial Customer Price = ${computeSpecialCustomerPrice()}")
 
     }
 

@@ -8,6 +8,9 @@ class TV(price:Double ,manufac : String, size : Int):Electronics(price ,manufac)
         this.size = size
     }
 
+    override fun mostrar(): String {
+        return super.mostrar() + "\nSize = $size\n----------------"
+    }
     override fun computeSpecialCustomerPrice(): Double {
         return computerSalePrice()-100
     }

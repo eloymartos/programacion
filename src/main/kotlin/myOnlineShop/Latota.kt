@@ -1,5 +1,7 @@
 package myOnlineShop
 
+import java.io.File
+
 fun main(args:Array<String>) {
 
     val listado = mutableListOf<Product>()
@@ -7,6 +9,7 @@ fun main(args:Array<String>) {
     for (i in args.indices) {
         buscartipo(listado, i, args)
     }
+    print(listado)
     while (true){
         print("operaciones a ejecutar:\n" +
                 "añadir 1\n" +
@@ -68,10 +71,13 @@ fun main(args:Array<String>) {
     //listado.add(Camera(500.0, "Sony"))
     //listado.add(Camera(700.0, "logitech"))
     //listado.add(objeto)
-    for (i in listado){
-        println(i.mostrar())
+    File("data/resultado").printWriter().use{out->
+        for (i in listado){
+            out.println(i.mostrar())
+        }
+        out.println(Product.contador)
     }
-    println(Product.contador)
+
 
 }
 

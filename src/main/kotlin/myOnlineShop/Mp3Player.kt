@@ -8,6 +8,10 @@ class Mp3Player(price:Double ,manufac : String, color : String):Electronics(pric
         this.color = color
     }
 
+    override fun mostrar(): String {
+        return super.mostrar() + "\nColor = $color\n----------------"
+    }
+
     override fun computeSpecialCustomerPrice(): Double {
         return computerSalePrice()-15
     }
