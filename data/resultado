@@ -20,7 +20,6 @@ regular price = 250.0
 sale price = 175.0
 Special Customer Price = -25.0
 Manufac = Apple
-Manufacturer = Apple
 ----------------
 objeto 4 = 
 tipo = myOnlineShop.Camera
@@ -28,14 +27,51 @@ regular price = 500.0
 sale price = 350.0
 Special Customer Price = 150.0
 Manufac = Sony
-Manufacturer = Sony
 ----------------
 objeto 5 = 
 tipo = myOnlineShop.Book
 regular price = 15.0
 sale price = 7.5
 Special Customer Price = 5.5
-publisher = Korea press
- Year = 1986
+publisher = press
+Year = 1986
 ----------------
-5
+objeto 6 = 
+tipo = myOnlineShop.TV
+regular price = 1250.0
+sale price = 1000.0
+Special Customer Price = 900.0
+Manufac = HiSens
+Size = 45
+----------------
+objeto 7 = 
+tipo = myOnlineShop.TV
+regular price = 1000.0
+sale price = 800.0
+Special Customer Price = 700.0
+Manufac = Samsung
+Size = 30
+----------------
+objeto 8 = 
+tipo = myOnlineShop.Camera
+regular price = 250.0
+sale price = 175.0
+Special Customer Price = -25.0
+Manufac = Apple
+----------------
+objeto 9 = 
+tipo = myOnlineShop.Camera
+regular price = 500.0
+sale price = 350.0
+Special Customer Price = 150.0
+Manufac = Sony
+----------------
+objeto 10 = 
+tipo = myOnlineShop.Book
+regular price = 15.0
+sale price = 7.5
+Special Customer Price = 5.5
+publisher = Korea press
+Year = 1986
+----------------
+10

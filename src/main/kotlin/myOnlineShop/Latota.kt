@@ -5,6 +5,12 @@ import java.io.File
 fun main(args:Array<String>) {
 
     val listado = mutableListOf<Product>()
+    var archivo = File("data/resultado")
+    while (!archivo.exists()){
+        println("error, introduce de nuevo")
+        archivo = File(readln())
+    }
+    cargarArchivo(archivo, listado)
     //TV 1250.0 HiSens 45 TV 1000.0 Samsung 30 Mp3Player 250.0 Apple blue Camera 500.0 Sony Book 15.0 "Korea press" 1986
     for (i in args.indices) {
         buscartipo(listado, i, args)
@@ -118,5 +124,26 @@ fun buscartipo(listado: MutableList<Product>, i:Int, args:Array<String>){
     }
     if (args[i] == "Mp3Player"){
         listado.add(Camera(args[i+1].toDouble(), args[i+2]))
+    }
+}
+
+fun cargarArchivo(archivo:File, listado: MutableList<Product>){
+    var lectorBuffer = archivo.bufferedReader().readLines()
+    for (i in lectorBuffer.indices){
+        if (lectorBuffer[i].split(" ")[0] == "objeto") {
+            when (lectorBuffer[i+1].split(".")[1]){
+                "TV"->listado.add(TV(lectorBuffer[i+2].split("=", " ").last().toDouble(),
+                    lectorBuffer[i+5].split("=", " ").last(),
+                    lectorBuffer[i+6].split("=", " ").last().toInt()))
+                "Book"->listado.add(Book(lectorBuffer[i+2].split("=", " ").last().toDouble(),
+                    lectorBuffer[i+5].split("=", " ").last(),
+                    lectorBuffer[i+6].split("=", " ").last().toInt()))
+                "Mp3Player"->listado.add(Mp3Player(lectorBuffer[i+2].split("=", " ").last().toDouble(),
+                    lectorBuffer[i+5].split("=", " ").last(),
+                    lectorBuffer[i+6].split("=", " ").last()))
+                "Camera"->listado.add(Camera(lectorBuffer[i+2].split("=", " ").last().toDouble(),
+                    lectorBuffer[i+5].split("=", " ").last()))
+            }
+        }
     }
 }
